@@ -8,8 +8,8 @@
 
 * João Pedro Silva Minella:
     - Experiente em linguagens Python e C#, trabalhei em projetos relacionados a desenvolvimento de aplicações mobile, desenvolvimento de jogos com Unity, além de laguns conhecimentos relacionados a design gráfico, criação de personagem e edição de vídeo.
-    - Interessado em Computação, Design (games) e Mulheres
+    - Interessado em Computação, Design, Game Devs, Dança, Comida e Mulheres
 
 * Yuri Juliano do Nascimento Boeira:
     - Experiente em desenvolvimento de aplicações mobile, especificamente em sistemas Android, programador Shell Script, Python, Java e C#.
-    - Interessado em Computação, Psicologia e Mulheres
+    - Interessado em Computação, Filosofia, Lollo, Psicologia e Mulheres
