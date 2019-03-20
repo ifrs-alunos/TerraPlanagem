@@ -7,8 +7,8 @@
 ### Desenvolvedores:
 
 * **João Pedro Silva Minella:**
-    - Experiente em linguagens **_Python_** e **_C#_**, trabalhei em projetos relacionados a desenvolvimento de aplicações mobile, desenvolvimento de jogos com **_Unity_**, além de laguns conhecimentos relacionados a design gráfico, criação de personagem e edição de vídeo.
-    - Interessado em Computação, Design, Game Devs, Dança, Comida e Mulheres
+    - Experiente nas linguagens **_Python_** e **_C#_**. Trabalhei em projetos relacionados a desenvolvimento de aplicações mobile, desenvolvimento de jogos com **_Unity_**, além de possuir alguns conhecimentos relacionados a design gráfico, criação de personagem e edição de vídeo.
+    - Interessado em Computação, Design, Game Devs, Dança e Mulheres
 
 * **Yuri Juliano do Nascimento Boeira:**
     - Experiente em desenvolvimento de aplicações mobile, especificamente em sistemas **_Android_**, programador **_Shell Script_**, **_Python_**, **_Java_** e **_C#_**.
