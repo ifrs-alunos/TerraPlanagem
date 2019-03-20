@@ -1,3 +1,3 @@
 # Antithesis
 
-- [ x ] Implementar Titulos
+- [x] Implementar Titulos
