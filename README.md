@@ -2,12 +2,12 @@
 
 ### Propósito: 
 
-* É permitir um ambiente agradável e amigável de discussões relacionadas a temas não convencionais, normalmente discordando do que nos é imposto pelo sistema.
+* Permitir um ambiente agradável e amigável de discussões relacionadas a temas não convencionais, normalmente discordando do que é imposto pelo sistema na sociedade.
 
 ### Desenvolvedores:
 
 * João Pedro Silva Minella:
-    - Sou aluno do IFRS - Campus Vacaria no curso de multimídia. Com experiências nas linguagens Python e C#, trabalhei em projetos relacionados a desenvolvimento de aplicações mobile, desenvolvimento de jogos com Unity, além de laguns conhecimentos relacionados a design gráfico, criação de personagem e edição de vídeo.
+    - Experiente em linguagens Python e C#, trabalhei em projetos relacionados a desenvolvimento de aplicações mobile, desenvolvimento de jogos com Unity, além de laguns conhecimentos relacionados a design gráfico, criação de personagem e edição de vídeo.
     - Interessado em Computação, Design (games) e Mulheres
 
 * Yuri Juliano do Nascimento Boeira:
