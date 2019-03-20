@@ -6,7 +6,7 @@
 
 ### Desenvolvedores:
 
-* João Pedro Silva Minella:
+* *João Pedro Silva Minella*:
     - Experiente em linguagens Python e C#, trabalhei em projetos relacionados a desenvolvimento de aplicações mobile, desenvolvimento de jogos com Unity, além de laguns conhecimentos relacionados a design gráfico, criação de personagem e edição de vídeo.
     - Interessado em Computação, Design, Game Devs, Dança, Comida e Mulheres
 
@@ -20,3 +20,7 @@
 - [ ] Postagem de conteúdo dos usuários (imagens, artigos e textos)
 - [ ] Sistema de Enquete:
 	* Proporcionar semanalmente uma enquete onde duas ideias relacionadas a um mesmo tema serão apresentadas aos usuários que poderão escolher com qual das duas ideias mais se identificam
+
+### Instalação:
+
+### Resolução de Bugs:
