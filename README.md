@@ -6,5 +6,5 @@
 
 ### Desenvolvedores:
 
-* Yuri Boeira:
-**Teste
+1. Yuri Boeira:
+  * Eu sou um programador junior
