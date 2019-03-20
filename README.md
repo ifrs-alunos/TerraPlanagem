@@ -15,8 +15,8 @@
     - Interessado em Computação, Filosofia, Lollo, Psicologia e Mulheres
 
 ### Funcionalidades:
-* Cadastro usuário
-* Login de usuário
-* Postagem de conteúdo (imagens, artigos e textos)
+* Cadastro de usuários
+* Login de usuários
+* Postagem de conteúdo dos usuários (imagens, artigos e textos)
 * Sistema de Enquete:
 	* Proporcionar semanalmente uma enquente onde duas ideias relacionadas a um mesmo tema serão apresentadas aos usuários que poderão escolher com qual das duas ideias mais se identificam
