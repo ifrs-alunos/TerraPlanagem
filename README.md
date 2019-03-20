@@ -19,4 +19,4 @@
 - [ ] Login de usuários
 - [ ] Postagem de conteúdo dos usuários (imagens, artigos e textos)
 - [ ] Sistema de Enquete:
-	* Proporcionar semanalmente uma enquente onde duas ideias relacionadas a um mesmo tema serão apresentadas aos usuários que poderão escolher com qual das duas ideias mais se identificam
+	* Proporcionar semanalmente uma enquete onde duas ideias relacionadas a um mesmo tema serão apresentadas aos usuários que poderão escolher com qual das duas ideias mais se identificam
