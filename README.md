@@ -23,4 +23,8 @@
 
 ### Instalação:
 
+_"até um outro dia"_
+
 ### Resolução de Bugs:
+
+_"até um outro dia"_
