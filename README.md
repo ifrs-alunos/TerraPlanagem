@@ -6,5 +6,6 @@
 
 ### Desenvolvedores:
 
-1. Yuri Boeira:
-  * Eu sou um programador junior
+* Yuri Boeira:
+ * Alo
+ * Alow
