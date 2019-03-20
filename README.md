@@ -1,3 +1,3 @@
-# Antítese do Sistema
+# Antithesis
 
-- [ ] Implementar Titulos
+- [ x ] Implementar Titulos
