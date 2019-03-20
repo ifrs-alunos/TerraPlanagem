@@ -7,5 +7,4 @@
 ### Desenvolvedores:
 
 * Yuri Boeira:
- * Alo
- * Alow
+    * Boceto
