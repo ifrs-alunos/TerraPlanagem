@@ -7,17 +7,9 @@
 </head>
 <body>
 	<div class="container">
-		{% if publicacao_recente_lista %}
-		<div></div>
-			<ul class="collection">
-			{% for publicacao in publicacao_recente_lista %}
-				<li class="collection-item">
-					<a href="{% url 'home:publicacao' publicacao.id %}">{{ publicacao.title }}</a>
-				</li>
-			{% endfor %}
-			</ul>
-		{% else %}
-			<p>Nenhuma publicação disponível</p>
+		{% if publicacao %}
+			<h3>{{ publicacao.title }}</h3>
+			<p>{{ publicacao.text }}</p>
 		{% endif %}
 	</div>
 	
