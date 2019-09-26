@@ -5,5 +5,4 @@ app_name = 'home'
 
 urlpatterns = [
 	path('<int:publicacao_id>/', views.publicacao, name='publicacao'),
-	path('', views.home, name='home'),
 ]
