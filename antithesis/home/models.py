@@ -8,7 +8,7 @@ class Usuario(models.Model):
 		return self.user.username
 
 class Publicacao(models.Model):
-	user = models.ForeignKey(Usuario, on_delete=models.SET_NULL, null=True)
+	user = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 	title = models.CharField(max_length=100)
 	text = models.TextField()
 
@@ -16,8 +16,8 @@ class Publicacao(models.Model):
 		return self.title
 
 class Comentario(models.Model):
-	user = models.ForeignKey(Usuario, on_delete=models.SET_NULL, null=True)
-	publishing = models.ForeignKey(Publicacao, on_delete=models.SET_NULL, null=True)
+	user = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+	publishing = models.ForeignKey(Publicacao, on_delete=models.CASCADE)
 	text = models.TextField()
 
 	def __str__(self):

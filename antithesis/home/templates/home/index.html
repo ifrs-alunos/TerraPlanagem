@@ -2,22 +2,25 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>Antithesis</title>
+	<title>Antithesis - Home</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <body>
 	<div class="container">
 		{% if publicacao_recente_lista %}
-		<div></div>
 			<ul class="collection">
-			{% for publicacao in publicacao_recente_lista %}
-				<li class="collection-item">
-					<a href="{% url 'home:publicacao' publicacao.id %}">{{ publicacao.title }}</a>
-				</li>
-			{% endfor %}
+				{% for publicacao in publicacao_recente_lista %}
+					<li class="collection-item">
+						<a href="{% url 'home:publicacao' publicacao.id %}">{{ publicacao.title }}</a>
+					</li>
+				{% endfor %}
 			</ul>
 		{% else %}
 			<p>Nenhuma publicação disponível</p>
+		{% endif %}
+
+		{% if user.is_authenticated %}
+			<p>{{ user.username }}</p>
 		{% endif %}
 	</div>
 	

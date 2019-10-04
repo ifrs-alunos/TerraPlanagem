@@ -3,3 +3,4 @@ from .models import Usuario, Publicacao, Comentario
 
 admin.site.register(Publicacao)
 admin.site.register(Comentario)
+admin.site.register(Usuario)

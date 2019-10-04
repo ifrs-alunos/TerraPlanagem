@@ -6,6 +6,9 @@ from .models import Publicacao
 def home(request):
 	publicacao_recente_lista = Publicacao.objects.order_by('-id')
 	
+	if request.user.is_authenticated:
+		print('AUTENTICADO: {}'.format(request.user))
+
 	dados = {
 		'publicacao_recente_lista': publicacao_recente_lista,
 	}

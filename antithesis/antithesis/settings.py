@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'cadastro_usuario',
+    'login_usuario',
 ]
 
 MIDDLEWARE = [
@@ -125,4 +126,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = "C:\\Users\\%username%\\Documents\\TerraPlanagem\\antithesis\\static"
+STATIC_ROOT = "C:\\Users\\%username%\\Desktop\\TerraPlanagem\\antithesis\\static"
