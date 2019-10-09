@@ -10,9 +10,6 @@ def login_usuario(request):
 		form = LoginForm(request.POST)
 
 		if form.is_valid():
-			print(form.cleaned_data['username'])
-			print(form.cleaned_data['password'])
-
 			user = authenticate(
 				username=form.cleaned_data['username'],
 				password=form.cleaned_data['password']
@@ -20,10 +17,10 @@ def login_usuario(request):
 
 			if user is not None:
 				login(request, user)
-			else:
-				print('{} - {}'.format(request, 'USUÁRIO NAO CADASTRADO'))
 
-			return redirect('home')
+				return redirect('home')
+			else:
+				return render(request, 'login_usuario/login.html', {'form': LoginForm(), 'erro': 'O usuário não está cadastrado'})
 	else:
 		# caso o formulário não estiver vindo no método post,
 		# será enviado um formulário para o usuário
