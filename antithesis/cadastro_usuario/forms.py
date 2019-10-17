@@ -6,7 +6,7 @@ class UserForm(forms.ModelForm):
 		model = User
 		fields = ['username', 'first_name', 'email', 'password']
 		widgets = {
-			'username': forms.TextInput(attrs={'autocomplete': 'off'}),
+			'username': forms.TextInput(attrs={'autocomplete': 'off',}),
 			'first_name': forms.TextInput(attrs={'autocomplete': 'off'}),
 			'email': forms.EmailInput(attrs={'autocomplete': 'off'}),
 			'password': forms.PasswordInput(),

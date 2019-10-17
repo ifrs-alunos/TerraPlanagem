@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'cadastro_usuario',
+    'cadastro_postagens',
     'login_usuario',
 ]
 

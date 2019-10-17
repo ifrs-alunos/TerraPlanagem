@@ -9,8 +9,8 @@ class Usuario(models.Model):
 
 class Publicacao(models.Model):
 	user = models.ForeignKey(Usuario, on_delete=models.CASCADE)
-	title = models.CharField(max_length=100)
-	text = models.TextField()
+	title = models.CharField(max_length=100, verbose_name='Título')
+	text = models.TextField(verbose_name='Texto')
 
 	def __str__(self):
 		return self.title
