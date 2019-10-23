@@ -1,24 +1,28 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<meta charset="utf-8">
-	<title>Antithesis - Publicação</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-</head>
-<body>
-	<div class="container">
-		{% if publicacao %}
-			<h3>{{ publicacao.title }}</h3>
-			<p>{{ publicacao.text }}</p>
+{% extends 'base.html' %}
+{% load static %}
 
-			<h3>Comentários</h3>
+{% block titulo %}Antithesis - Publicação{% endblock %}
 
-			{% for comentario in publicacao.comentario_set.all %}
-				<p>{{ comentario.text }} | {{ comentario.user.user.get_full_name }}</p>
-			{% endfor %}
-		{% endif %}
-	</div>
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/material"></script>
-</body>
-</html>
+{% block tituloHome %}
+	{% if publicacao %}
+		{{ publicacao.title }}
+	{% endif %}
+{% endblock tituloHome %}
+
+{% block subtituloHome %}
+	{% if publicacao %}
+		{{ publicacao.text }}
+	{% endif %}
+{% endblock subtituloHome %}
+
+{% block imagemBackground %}{% static 'img/discussion.gif' %}{% endblock imagemBackground %}
+
+{% block content %}
+	{% if publicacao %}
+		<h3>Comentários</h3>
+
+		{% for comentario in publicacao.comentario_set.all %}
+			<p>{{ comentario.text }} | {{ comentario.user.user.get_full_name }}</p>
+		{% endfor %}
+	{% endif %}
+{% endblock content %}

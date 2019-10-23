@@ -1,29 +1,39 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<meta charset="utf-8">
-	<title>Antithesis - Home</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-</head>
-<body>
-	<div class="container">
-		{% if publicacao_recente_lista %}
-			<ul class="collection">
-				{% for publicacao in publicacao_recente_lista %}
-					<li class="collection-item">
-						<a href="{% url 'home:publicacao' publicacao.id %}">{{ publicacao.title }}</a>
-					</li>
-				{% endfor %}
-			</ul>
-		{% else %}
-			<p>Nenhuma publicação disponível</p>
-		{% endif %}
+{% extends 'base.html' %}
+{% load static %}
 
-		{% if user.is_authenticated %}
-			<p>{{ user.username }}</p>
-		{% endif %}
-	</div>
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/material"></script>
-</body>
-</html>
+{% block titulo %}Antithesis - Home{% endblock %}
+{% block tituloHome %}Bem vindo (a)!{% endblock %}
+{% block subtituloHome %}Aqui você encontra as mais diversas opiniões e teorias sobre tudo no universo. Divirta-se!{% endblock %}
+{% block imagemBackground %}{% static 'img/universe.gif' %}{% endblock %}
+
+{% block content %}
+<!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {% for publicacao in publicacao_recente_lista %}
+          <div class="post-preview">
+            <a href="{% url 'home:publicacao' publicacao.id %}">
+              <h3 class="post-title">
+                {{ publicacao.title }}
+              </h3>
+              
+              <h4 class="post-subtitle">
+                {{ publicacao.text }}
+              </h4>
+            </a>
+            
+            <p class="post-meta">Postado por
+              <a href="#">{{ publicacao.user.user.get_full_name }}</a>
+            </p>
+          </div>
+        {% endfor %}
+        
+        <!-- Pager -->
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="">Outras postagens &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

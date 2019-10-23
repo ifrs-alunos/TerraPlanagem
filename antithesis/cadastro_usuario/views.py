@@ -4,6 +4,7 @@ from home.models import Usuario
 from .forms import UserForm
 from login_usuario.forms import LoginForm
 
+
 def cadastro_usuario(request):
 	if request.method == 'POST':
 		form = UserForm(request.POST)

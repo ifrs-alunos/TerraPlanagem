@@ -10,7 +10,7 @@
 	<div class="container row">
 		<h3 class="center">Cadastro de Postagem</h3><br>
 
-		<form action="{% url 'cadastro_usuario:cadastro_usuario' %}" method="POST">
+		<form action="{% url 'cadastro_postagens:cadastro_postagens' %}" method="POST">
 			{% csrf_token %}
 
 			{% for field in form %}

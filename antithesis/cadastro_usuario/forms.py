@@ -6,10 +6,26 @@ class UserForm(forms.ModelForm):
 		model = User
 		fields = ['username', 'first_name', 'email', 'password']
 		widgets = {
-			'username': forms.TextInput(attrs={'autocomplete': 'off',}),
-			'first_name': forms.TextInput(attrs={'autocomplete': 'off'}),
-			'email': forms.EmailInput(attrs={'autocomplete': 'off'}),
-			'password': forms.PasswordInput(),
+			'username': forms.TextInput(
+				attrs={
+					'autocomplete': 'off',
+					'class': 'form-control',
+				}),
+			'first_name': forms.TextInput(
+				attrs={
+					'autocomplete': 'off',
+					'class': 'form-control',
+				}),
+			'email': forms.EmailInput(
+				attrs={
+					'autocomplete': 'off',
+					'class': 'form-control',
+				}),
+			'password': forms.PasswordInput(
+				attrs={
+					'autocomplete': 'off',
+					'class': 'form-control',
+				}),
 		}
 
 	#def clean(self):
