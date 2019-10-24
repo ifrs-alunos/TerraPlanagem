@@ -10,6 +10,7 @@ class Usuario(models.Model):
 class Publicacao(models.Model):
 	user = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 	title = models.CharField(max_length=100, verbose_name='Título')
+	subtitle = models.CharField(max_length=200, verbose_name='Subtítulo', default='')
 	text = models.TextField(verbose_name='Texto')
 
 	def __str__(self):

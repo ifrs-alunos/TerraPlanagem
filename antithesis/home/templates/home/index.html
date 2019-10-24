@@ -2,9 +2,32 @@
 {% load static %}
 
 {% block titulo %}Antithesis - Home{% endblock %}
-{% block tituloHome %}Bem vindo (a)!{% endblock %}
-{% block subtituloHome %}Aqui você encontra as mais diversas opiniões e teorias sobre tudo no universo. Divirta-se!{% endblock %}
+
+{% block siteHeading %}site-heading{% endblock siteHeading %}
+
+{% block tituloHome %}
+  {% if user.is_authenticated %}
+    Olá, {{ user.get_full_name }}!
+  {% else %}
+    Bem vindo (a)!
+  {% endif %}
+{% endblock %}
+
+{% block subtituloHome %}
+  {% if not user.is_authenticated %}
+    Aqui você encontra as mais diversas opiniões e teorias sobre tudo no universo. Divirta-se!
+  {% endif %}
+{% endblock %}
+
 {% block imagemBackground %}{% static 'img/universe.gif' %}{% endblock %}
+
+{% block navMenu %}
+  {% if user.is_authenticated %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'login_usuario:deslogar_usuario' %}"><i class="fa fa-sign-out"></i> Deslogar</a>
+    </li>
+  {% endif %}
+{% endblock navMenu %}
 
 {% block content %}
 <!-- Main Content -->

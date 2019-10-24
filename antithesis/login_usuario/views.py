@@ -27,3 +27,8 @@ def login_usuario(request):
 		form = LoginForm()
 
 	return render(request, 'login_usuario/login.html', {'form': form})
+
+def deslogar_usuario(request):
+	logout(request)
+
+	return redirect('home')

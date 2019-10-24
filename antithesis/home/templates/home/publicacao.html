@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block titulo %}Antithesis - Publicação{% endblock %}
+{% block siteHeading %}post-heading{% endblock siteHeading %}
 
 {% block tituloHome %}
 	{% if publicacao %}
@@ -11,7 +12,7 @@
 
 {% block subtituloHome %}
 	{% if publicacao %}
-		{{ publicacao.text }}
+		{{ publicacao.subtitle }}
 	{% endif %}
 {% endblock subtituloHome %}
 
@@ -19,10 +20,22 @@
 
 {% block content %}
 	{% if publicacao %}
-		<h3>Comentários</h3>
+		<article>
+		    <div class="container">
+		      <div class="row">
+		        <div class="col-lg-8 col-md-10 mx-auto">
+					<p>{{ publicacao.text }}</p>
+					
+					<hr>
 
-		{% for comentario in publicacao.comentario_set.all %}
-			<p>{{ comentario.text }} | {{ comentario.user.user.get_full_name }}</p>
-		{% endfor %}
+					<h3>Comentários</h3>
+
+					{% for comentario in publicacao.comentario_set.all %}
+						<p>{{ comentario.text }} | {{ comentario.user.user.get_full_name }}</p>
+					{% endfor %}
+		        </div>
+		      </div>
+		    </div>
+		</article>
 	{% endif %}
 {% endblock content %}
