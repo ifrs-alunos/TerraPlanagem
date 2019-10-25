@@ -44,6 +44,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'login_usuario:login_usuario' %}"><i class="fa fa-sign-in"></i> Login</a>
             </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'cadastro_postagens:cadastro_postagens' %}"><i class="fa fa-pencil-square-o"></i> Escrever Postagem</a>
+            </li>
           {% endif %}
 
           {% block navMenu %}{% endblock navMenu %}
@@ -60,7 +64,12 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="{% block siteHeading %}{% endblock siteHeading %}">
             <h1>{% block tituloHome %}{% endblock tituloHome %}</h1>
-            <span class="subheading">{% block subtituloHome %}{% endblock subtituloHome %}</span>
+            <h2 class="subheading">{% block subtituloHome %}{% endblock subtituloHome %}</h2>
+            {% if publicacao %}
+              <span class="meta">Postado por
+                <a href="#">{{ publicacao.user.user.get_full_name }}</a>
+              </span>
+            {% endif %}
           </div>
         </div>
       </div>
