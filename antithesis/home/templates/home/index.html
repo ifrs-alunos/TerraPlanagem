@@ -16,6 +16,8 @@
 {% block subtituloHome %}
   {% if not user.is_authenticated %}
     Aqui você encontra as mais diversas opiniões e teorias sobre tudo no universo. Divirta-se!
+  {% else %}
+    Não esqueça de relatar bugs e problemas que você encontrar pelo sistema! Obrigado, de equipe <i>TerraPlanagem</i>
   {% endif %}
 {% endblock %}
 
