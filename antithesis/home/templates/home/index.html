@@ -42,14 +42,20 @@
               <h3 class="post-title">
                 {{ publicacao.title }}
               </h3>
-              
+
               <h4 class="post-subtitle">
                 {{ publicacao.subtitle }}
               </h4>
             </a>
-            
+
             <p class="post-meta">Postado por
-              <a href="#">{{ publicacao.user.user.get_full_name }}</a>
+				<a href="#">{{ publicacao.user.user.get_full_name }}</a>
+				 {% if user == publicacao.user.user %}
+					|
+					<a href="{% url 'cadastro_postagens:editar_postagem' publicacao.id %}">
+						 Editar Publicação <i class="fa fa-pencil-square-o"></i>
+					</a>
+				{% endif %}
             </p>
           </div>
         {% endfor %}

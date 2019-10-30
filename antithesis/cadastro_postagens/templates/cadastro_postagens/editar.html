@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}Antithesis - Editar{% endblock %}
+{% block tituloHome %}Editar Postagem{% endblock %}
+{% block subtituloHome %}Cometeu algum erro de digitação? Edite quantas vezes desejar!{% endblock %}
+{% block imagemBackground %}{% static 'img/universe4.gif' %}{% endblock %}
+
+{% block siteHeading %}site-heading{% endblock siteHeading %}
+
+{% block navMenu %}
+  {% if user.is_authenticated %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'login_usuario:deslogar_usuario' %}"><i class="fa fa-sign-out"></i> Deslogar</a>
+    </li>
+  {% endif %}
+{% endblock navMenu %}
+
+{% block content %}
+	{{ publicacao.title }}
+{% endblock content %}
