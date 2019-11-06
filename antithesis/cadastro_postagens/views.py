@@ -21,10 +21,39 @@ def cadastro_postagens(request):
 	return redirect('home')
 
 def editar_postagem(request, publicacao_id):
-	publicacao = get_object_or_404(Publicacao, pk=publicacao_id)
+	if request.user.is_authenticated:
+		publicacao = get_object_or_404(Publicacao, pk=publicacao_id)
 
-	dados = {
-		'publicacao': publicacao,
-	}
+		if request.method == 'POST':
+			form = PublicacaoForm(request.POST, instance=publicacao)
+			
+			if form.is_valid():
+				post = form.save(commit=False)
+				post.user = request.user.usuario
+				post.save()
 
-	return render(request, 'cadastro_postagens/editar.html', dados)
+				return redirect('home')
+		else:
+			form = PublicacaoForm(instance=publicacao)
+
+			dados = {
+				'publicacao': publicacao,
+				'form': form,
+			}
+			
+			return render(request, 'cadastro_postagens/editar.html', dados)
+	else:
+		return redirect('home')
+
+def deletar_postagem(request, publicacao_id):
+	if request.user.is_authenticated:
+		publicacao = get_object_or_404(Publicacao, pk=publicacao_id)
+		
+		try:
+			publicacao.delete()
+		except:
+			return render(request, 'cadastro_postagens/editar.html')	
+
+		return redirect('home')
+	else:
+		return redirect('home')
