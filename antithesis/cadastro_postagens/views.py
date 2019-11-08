@@ -52,7 +52,7 @@ def deletar_postagem(request, publicacao_id):
 		try:
 			publicacao.delete()
 		except:
-			return render(request, 'cadastro_postagens/editar.html')	
+			return render(request, 'cadastro_postagens/editar.html')
 
 		return redirect('home')
 	else:

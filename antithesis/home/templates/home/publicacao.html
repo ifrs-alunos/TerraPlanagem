@@ -32,9 +32,27 @@
 					<h3>Comentários</h3>
 
 					{% for comentario in publicacao.comentario_set.all %}
-						<p>{{ comentario.text }} | {{ comentario.user.user.get_full_name }}</p>
+						<h5>{{ comentario.user.user.get_full_name }}</h5>
+						{{ comentario.text }}
+						<br><br>
 					{% endfor %}
-		        </div>
+					
+					<hr/>
+
+					<form action="{% url 'home:publicacao' publicacao.id %}" method="POST">
+						{% csrf_token %}
+
+						{% for field in form %}
+							<div class="form-group">
+								<label>Comentário:</label>
+								{{ field }}
+								{{ field.errors }}
+							</div>
+						{% endfor %}
+						
+						<button class="btn btn-primary" type="submit" name="action">Comentar</button>
+					</form>
+				</div>
 		      </div>
 		    </div>
 		</article>
