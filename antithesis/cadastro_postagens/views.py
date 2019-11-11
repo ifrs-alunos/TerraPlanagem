@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from cadastro_postagens.forms import PublicacaoForm
 from login_usuario.forms import LoginForm
-from home.models import Publicacao
+from home.models import Publicacao, Comentario
 
 def cadastro_postagens(request):
 	if request.user.is_authenticated:
@@ -53,6 +53,19 @@ def deletar_postagem(request, publicacao_id):
 			publicacao.delete()
 		except:
 			return render(request, 'cadastro_postagens/editar.html')
+
+		return redirect('home')
+	else:
+		return redirect('home')
+
+def excluir_comentario(request, comentario_id):
+	if request.user.is_authenticated:
+		comentario = get_object_or_404(Comentario, pk=comentario_id)
+		
+		try:
+			comentario.delete()
+		except:
+			return redirect('home')
 
 		return redirect('home')
 	else:

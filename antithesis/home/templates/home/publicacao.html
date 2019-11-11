@@ -26,6 +26,7 @@
 		      <div class="row">
 		        <div class="col-lg-8 col-md-10 mx-auto">
 					<p align="justify">{{ publicacao.text }}</p>
+					<i>Postado por <a href="#">{{ publicacao.user }}</a></i>
 					
 					<hr>
 
@@ -34,10 +35,14 @@
 					{% for comentario in publicacao.comentario_set.all %}
 						<h5>{{ comentario.user.user.get_full_name }}</h5>
 						{{ comentario.text }}
+						
+						{% if user == comentario.user.user %}
+							<a href="{% url 'cadastro_postagens:excluir_comentario' comentario.id %}">
+								<i class="fa fa-trash-o text-danger"></i>
+							</a>
+						{% endif %}
 						<br><br>
 					{% endfor %}
-					
-					<hr/>
 
 					<form action="{% url 'home:publicacao' publicacao.id %}" method="POST">
 						{% csrf_token %}

@@ -28,7 +28,7 @@ def publicacao(request, publicacao_id):
 				comentario.save()
 				
 				return redirect('home')
-
+				
 	dados = {
 		'publicacao': publicacao,
 		'form': form,
