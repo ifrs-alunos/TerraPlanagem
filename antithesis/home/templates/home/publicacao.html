@@ -37,7 +37,7 @@
 						{{ comentario.text }}
 						
 						{% if user == comentario.user.user %}
-							<a href="{% url 'cadastro_postagens:excluir_comentario' comentario.id %}">
+							<a href="{% url 'home:excluir_comentario' comentario.id publicacao.id %}">
 								<i class="fa fa-trash-o text-danger"></i>
 							</a>
 						{% endif %}
@@ -49,6 +49,12 @@
 
 						{% for field in form %}
 							<div class="form-group">
+								{% if mensagens %}
+									<ul>
+										<li class="text-danger">{{ mensagens }}</li>
+									</ul>
+								{% endif %}
+
 								<label>Comentário:</label>
 								{{ field }}
 								{{ field.errors }}

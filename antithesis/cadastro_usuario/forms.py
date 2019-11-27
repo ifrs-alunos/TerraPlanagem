@@ -27,9 +27,3 @@ class UserForm(forms.ModelForm):
 					'class': 'form-control',
 				}),
 		}
-
-	#def clean(self):
-	#	cleaned_data = super().clean()
-
-	#	if len(cleaned_data["password"]) < 8:
-	#		self.add_error("password", "A senha precisa ter 8 ou mais caracteres")

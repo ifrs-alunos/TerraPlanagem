@@ -58,15 +58,3 @@ def deletar_postagem(request, publicacao_id):
 	else:
 		return redirect('home')
 
-def excluir_comentario(request, comentario_id):
-	if request.user.is_authenticated:
-		comentario = get_object_or_404(Comentario, pk=comentario_id)
-		
-		try:
-			comentario.delete()
-		except:
-			return redirect('home')
-
-		return redirect('home')
-	else:
-		return redirect('home')
