@@ -1,14 +1,19 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
+from django.core.paginator import Paginator
 from .models import Publicacao
 from .forms import ComentarioForm
 from .models import Comentario
 
 def home(request):
 	publicacao_recente_lista = Publicacao.objects.order_by('-id')
+	paginator = Paginator(publicacao_recente_lista, 3)
+
+	page = request.GET.get('page')
+	publicacoes = paginator.get_page(page)
 
 	dados = {
-		'publicacao_recente_lista': publicacao_recente_lista,
+		'publicacao_recente_lista': publicacoes,
 	}
 	
 	return render(request, 'home/index.html', dados)
