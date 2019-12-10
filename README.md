@@ -17,7 +17,7 @@
 ### Funcionalidades:
 - [ ] Cadastro de usuários
 - [ ] Login de usuários
-- [ ] Postagem de conteúdo dos usuários (imagens, artigos e textos)
+- [ ] Postagem de conteúdo dos usuários (artigos e textos)
 
 ### Instalação:
 
