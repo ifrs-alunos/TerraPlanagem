@@ -17,7 +17,20 @@
 	{% endif %}
 {% endblock subtituloHome %}
 
-{% block imagemBackground %}{% static 'img/discussion.gif' %}{% endblock imagemBackground %}
+{% block imagemBackground %}
+	{% if publicacao.image %}{{ publicacao.image.url }}{% endif %}
+{% endblock imagemBackground %}
+
+{% block navMenu %}
+  {% if user.is_authenticated %}
+  	<li class="nav-item">
+      <a class='nav-link' href="{% url 'cadastro_postagens:editar_postagem' publicacao.id %}"><i class="fa fa-pencil"></i> Editar Postagem</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'login_usuario:deslogar_usuario' %}"><i class="fa fa-sign-out"></i> Deslogar</a>
+    </li>
+  {% endif %}
+{% endblock navMenu %}
 
 {% block content %}
 	{% if publicacao %}

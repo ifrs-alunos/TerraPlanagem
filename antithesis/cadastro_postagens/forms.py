@@ -4,7 +4,7 @@ from home.models import Publicacao
 class PublicacaoForm(forms.ModelForm):
 	class Meta:
 		model = Publicacao
-		fields = ('title', 'subtitle', 'text',)
+		fields = ('title', 'subtitle', 'text', 'image')
 		widgets = {
 			'title': forms.TextInput(attrs={'autocomplete': 'off', 'class': 'form-control',}),
 			'subtitle': forms.TextInput(attrs={'autocomplete': 'off', 'class': 'form-control',}),

@@ -12,6 +12,7 @@ class Publicacao(models.Model):
 	title = models.CharField(max_length=100, verbose_name='Título')
 	subtitle = models.CharField(max_length=200, verbose_name='Subtítulo', default='')
 	text = models.TextField(verbose_name='Texto')
+	image = models.ImageField(upload_to='media/', default='/media/discussion.gif', null=True,)
 
 	def __str__(self):
 		return self.title

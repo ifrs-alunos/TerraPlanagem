@@ -6,7 +6,7 @@ from home.models import Publicacao, Comentario
 def cadastro_postagens(request):
 	if request.user.is_authenticated:
 		if request.method == 'POST':
-			form = PublicacaoForm(request.POST)
+			form = PublicacaoForm(request.POST, request.FILES)
 			
 			if form.is_valid():
 				post = form.save(commit=False)
@@ -25,7 +25,7 @@ def editar_postagem(request, publicacao_id):
 		publicacao = get_object_or_404(Publicacao, pk=publicacao_id)
 
 		if request.method == 'POST':
-			form = PublicacaoForm(request.POST, instance=publicacao)
+			form = PublicacaoForm(request.POST, request.FILES, instance=publicacao)
 			
 			if form.is_valid():
 				post = form.save(commit=False)
