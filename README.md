@@ -15,9 +15,10 @@
     - Interessado em Computação, Filosofia, Lollo, Psicologia e Mulheres
 
 ### Funcionalidades:
-- [ ] Cadastro de usuários
-- [ ] Login de usuários
-- [ ] Postagem de conteúdo dos usuários (artigos e textos)
+- [x] Cadastro de usuários
+- [x] Login de usuários
+- [x] Postagem de conteúdo dos usuários (artigos e textos)
+- [x] Postagem de comentários em publicações
 
 ### Instalação:
 
